@@ -1,59 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
-
-    <script src="countDown.min.js"></script>
-    <link href="countDown.min.css" media="all" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="flipdown.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="flipdown.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <style>
-        body {
-            background: #969393;
-        }
-        p {
+              p {
   text-align: center;
-  font-size: 34px;
+  font-size: 18px;
   margin-top: 0px;
   font-family: Arial-Black;
 }
     </style>
-</head>
+  </head>
+  <body>
 
-<body>
-    <div style="align-items: center; color: white;">
-        <p id="to" ></p>
-        <div class="container" style=" display: flex; align-items: center; justify-content: center;"></div>
+    <p>1.10.2023, 10:00:00 verbleibende</p>
+    <div class="example">
+      <div id="flipdown" class="flipdown"></div>
     </div>
-    <script>
-        const options = {
-            hour12: false
-        };
-
-
-        var toDate = new Date("Oct 1, 2023 10:00:00")
-        var countDownDate = toDate.getTime();
-
-        document.getElementById("to").innerHTML = toDate.toLocaleString("de-DE", options) + " \n verbleibende";
-
-        var cd = new Countdown({
-            cont: document.querySelector('.container'),
-            date: countDownDate,
-            outputTranslation: {
-                year: 'Years',
-                week: 'Wochen',
-                day: 'Tage',
-                hour: 'Stunde',
-                minute: 'Minutes',
-                second: 'Sekunden',
-            },
-            endCallback: null,
-            outputFormat: 'day|hour|minute|second',
-        });
-        cd.start();
-    </script>
-
-    </script>
-</body>
-
+  </body>
 </html>
