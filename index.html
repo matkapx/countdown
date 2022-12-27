@@ -45,15 +45,15 @@ var x = setInterval(function() {
     hour12:false
 };
 
-  document.getElementById("to").innerHTML = toDate.toLocaleString("en-US",options) + " \n kalan süre";
+  document.getElementById("to").innerHTML = toDate.toLocaleString("en-US",options) + " \n verbleibende";
 
-  document.getElementById("demo").innerHTML = days + "gün " + hours + "saat "
-  + minutes + "dakika " + seconds + "saniye ";
+  document.getElementById("demo").innerHTML = days + "tage " + hours + "stunde "
+  + minutes + "minute " + seconds + "sekunden ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "BİTTİ";
+    document.getElementById("demo").innerHTML = "Abgelaufen";
   }
 }, 1000);
 </script>
